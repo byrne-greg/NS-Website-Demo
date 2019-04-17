@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCHOOL_INFO>
+	<SCHOOL
+		name="National School"
+		address1="Address1" 
+		address2="Address2" 
+		address3="Address3"
+		contactNumber="04692xxxxx"
+		contactEmail="school@school.ie"
+		pupilCount="115"
+		teacherCount="5"
+		sntCount="1"
+	/>
+</SCHOOL_INFO>
+	

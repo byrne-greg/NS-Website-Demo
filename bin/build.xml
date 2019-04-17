@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="TranformXml" default="GenerateSite">
+
+  <property
+    name="dir.home"
+    value="${basedir}"
+  />
+  <property
+    name="dir.doc"
+    value="${dir.home}/docs"
+  />
+  <property
+    name="dir.data"
+    value="${dir.home}/data"
+  />
+  <property
+    name="dir.styles"
+    value="${dir.home}/styles"
+  />
+  <property
+    name="dir.css"
+    value="${dir.home}/css"
+  />
+  <property
+    name="dir.js"
+    value="${dir.home}/js"
+  />
+  <property
+    name="dir.img"
+    value="${dir.home}/img"
+  />
+  <property
+    name="dir.icons"
+    value="${dir.home}/icons"
+  />
+  <property
+    name="dir.resources"
+    value="${dir.home}/resources"
+  />
+  <property
+    name="file.xml.main"
+    value="${dir.data}/main.xml"
+  />
+  <property
+    name="file.html.index"
+    value="${dir.doc}/index.html"
+  />
+  <property
+    name="file.xsl.main"
+    value="${dir.styles}/main.xsl"
+  />
+
+  <target name="GenerateSite">
+
+    <delete>
+      <fileset dir="${dir.doc}" includes="**/*"/>
+    </delete>
+
+    <copy todir="${dir.doc}">
+      <fileset dir="${dir.home}">
+         <include name="img/**"/>
+      </fileset>
+    </copy>
+    <copy todir="${dir.doc}">
+      <fileset dir="${dir.home}">
+         <include name="resources/**"/>
+      </fileset>
+    </copy>
+    <copy todir="${dir.doc}">
+      <fileset dir="${dir.home}">
+         <include name="icons/**"/>
+      </fileset>
+    </copy>
+    <copy todir="${dir.doc}">
+      <fileset dir="${dir.home}">
+         <include name="css/**"/>
+      </fileset>
+    </copy>
+    <copy todir="${dir.doc}">
+      <fileset dir="${dir.home}">
+         <include name="js/**"/>
+      </fileset>
+    </copy>
+    <antcall target="TransformFile"/>
+  </target>
+
+  <target name="TransformFile">
+    <!-- Transform one file into an HTML file -->
+    <xslt 
+      in="${file.xml.main}" 
+      out="${file.html.index}" 
+      style="${file.xsl.main}"
+      force="true"
+      >
+      <param
+        expression="${dir.data}" 
+        name="data-dir"
+      />
+      <param
+        expression="${dir.doc}" 
+        name="web-dir"
+      />
+    </xslt>
+  </target>
+  
+</project>

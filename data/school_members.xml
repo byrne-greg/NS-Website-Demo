@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCHOOL_MEMBERS>
+	<STAFF>
+		<MEMBER name="StaffMember0">
+			<ROLE>Principal</ROLE>
+			<ROLE><TEACHER class="3rd"/></ROLE>
+		</MEMBER>
+		<MEMBER name="StaffMember1">
+			<ROLE>Deputy Principal</ROLE>
+			<ROLE><TEACHER class="Junior &amp; Senior Infants"/></ROLE>
+		</MEMBER>
+		<MEMBER name="StaffMember2">
+			<ROLE><TEACHER class="1st and 2nd"/></ROLE>
+		</MEMBER>
+		<MEMBER name="StaffMember3">
+			<ROLE><TEACHER class="3rd"/></ROLE>
+		</MEMBER>
+		<MEMBER name="StaffMember4">
+			<ROLE><TEACHER class="4th"/></ROLE>
+		</MEMBER>
+		<MEMBER name="StaffMember5">
+			<ROLE><TEACHER class="5th &amp; 6th"/></ROLE>
+		</MEMBER>
+		<MEMBER name="StaffMember6">
+			<ROLE>Secretary</ROLE>
+		</MEMBER>
+		<MEMBER name="StaffMember7">
+			<ROLE>Special Needs</ROLE>
+		</MEMBER>
+		<MEMBER name="StaffMember8">
+			<ROLE>Resource</ROLE>
+		</MEMBER>
+		<MEMBER name="StaffMember9">
+			<ROLE>Caretaker</ROLE>
+		</MEMBER>
+	</STAFF>
+	<BOM>
+		<MEMBER name="BOMMember0">
+			<ROLE>Chairman</ROLE>
+		</MEMBER>
+		<MEMBER name="BOMMember1">
+			<ROLE>Secretary</ROLE>
+		</MEMBER>
+		<MEMBER name="BOMMember2">
+			<ROLE>Teacher's Rep</ROLE>
+		</MEMBER>
+		<MEMBER name="BOMMember3">
+			<ROLE>Parent's Rep</ROLE>
+		</MEMBER>
+		<MEMBER name="BOMMember4">
+			<ROLE>Parent's Rep</ROLE>
+		</MEMBER>
+		<MEMBER name="BOMMember5">
+			<ROLE>Member</ROLE>
+		</MEMBER>
+	</BOM>
+</SCHOOL_MEMBERS>

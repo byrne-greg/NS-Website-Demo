@@ -1,0 +1,548 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- GRID ----- */
+
+.index_grid {
+    display: grid;
+    grid-template-areas:
+      "navigation_banner navigation_banner navigation_banner"
+      "display_banner display_banner display_banner"
+      "about_banner about_banner about_banner"
+      "headline_news headline_news facebook_feed"
+      "contact contact contact"
+      "staff staff staff"
+      "policies policies policies"
+      "history history history"
+      "footer footer footer";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+                
+}
+
+.page_grid {
+    display: grid;
+    grid-template-areas:
+      "navigation"
+      "pane"
+      "footer";
+}
+
+/* ----- SIDENAV ----- */
+
+.sidenav {
+   height: 100%;
+   position: fixed;
+   z-index: 20;
+   top: 0;
+   left: 0;
+   background-color: #6D0A1E;
+   overflow-x: hidden;
+   transition: 0.5s;
+   transform: translate3d(-100%,0,0);
+}
+
+.sidenav a {
+    text-decoration: none;
+    color: #D1D3D3;
+    display: block;
+    transition: 0.3s;
+    margin: 20px 5vw;
+    font-size: 3rem;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav_linkcontainer {
+    padding: 15px 0;
+}
+
+/* ----- NAVIGATION BANNER ----- */
+
+#navigation_banner {
+    grid-area: navigation_banner;
+    overflow: hidden;
+    background-color: #6D0A1E;
+    position: fixed; 
+    width: 100%;
+    top: 0; 
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation_sidenav_toggle {
+    margin: 0 1vw;
+}
+
+.navigation_sidenav_toggle_bar {
+    width: 40px;
+    height: 5px;
+    background-color: #D1D3D3;
+    margin: 5px 0;
+}
+
+.navigation_text {
+    color: white;
+    margin: 10px 1vw;
+    font-size: 1.5rem;
+}
+
+/* ----- DISPLAY BANNER ----- */
+
+#display_banner {
+    grid-area: display_banner;
+    width: 100%;
+}
+
+.display_banner_text_container {
+    position:relative;
+}
+
+
+.display_banner_text {
+    top: 12px;
+    margin: 45px 0 0 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    padding: 0 1vw;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.display_banner_image {
+    background-image: url("../img/school.png");
+    height: 100vh;
+    min-height: 800px;
+}
+
+
+
+/* ----- ABOUT BANNER ----- */
+
+#about_banner {
+    grid-area: about_banner;
+    width: 100%;
+    margin: 50px 0;
+}
+
+.about_banner_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about_banner_image { 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/pencil.jpg);
+    height: 50vh;
+    min-height: 350px
+}
+
+.about_banner_info_bubbles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.about_banner_info_bubble_container{
+    transition: transform 200ms;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    font-size: 2rem;
+    flex: 1; 
+}
+
+.about_banner_info_bubble_container:hover {
+    transform: scale(1.5);
+
+}
+
+.about_banner_info_bubble {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    height: 125px;
+    border-radius: 125px;
+    margin: 0 2vw 0 2vw;
+    border: 1px solid;
+    box-shadow: 1px 1px;
+
+}
+
+.about_banner_info_bubble-title {
+    align-self: center;
+    color: white;
+    text-align: center;
+}
+
+.about_banner_info_bubble_counter_value {
+  color: white;
+}
+
+#info_bubble_student {
+    background: #FF3333;
+}
+
+#info_bubble_teacher {
+    background: #33CC00;
+}
+
+#info_bubble_sna {
+    background: #0099FF;
+}
+
+/* ----- HEADLINE NEWS ----- */
+
+#headline_news {
+    grid-area: headline_news;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(0,0,0);
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+.headline_news_title {
+    margin: 0 0 0 1vw;
+    font-size: 2rem;
+}
+
+.headline_newsitem_container {
+    margin: 0 2vw 0 2vw;
+}
+
+.news_item {
+    padding: 10px 1vw;
+    margin: 15px 0;
+    border: 1px solid;
+    background-color: white;
+}
+
+.news_item_title {
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 1.5rem;
+}
+
+.news_item_date {
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.news_item_text {
+    margin: 5px 0;
+
+}
+
+.headline_news_button_morenews {
+    font-size: 2rem;
+    padding: 10px 2vw;
+}
+
+/* ----- FACEBOOK FEED ----- */
+
+#facebook_feed {
+    grid-area: facebook_feed;
+    width: 100%;
+    padding: 0 1vw 0 1vw;
+}
+
+.facebook_feed_container {
+    display: flex;
+    justify-content: center;
+}
+
+/* ----- CONTACT US ----- */
+
+#contact {
+    grid-area: contact;
+    background-color: #E4E1E0;
+    border-top: 10px solid;
+    margin: 20px 0 0 0;
+}
+
+.contact_title {
+    margin: 0 0 0 1vw;
+    font-size: 2rem;
+}
+
+.contact_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+
+}
+
+.contact_item {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    transition: transform 200ms;
+
+}
+
+.contact_item:hover {
+    transform: scale(2);
+      
+}
+
+.contact_item_icon {
+    margin: 0 0.5vw 0 0;
+}
+
+#contact_map {
+    min-height: 500px;
+    width: 100%;
+    padding: 0 2vw 30px 2vw;
+}
+
+/* ----- FOOTER ----- */
+
+#footer {
+    grid-area: footer;
+    overflow: hidden;
+    background-color: #6D0A1E;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer_text {
+    color: white;
+    font-size: 1rem;
+    margin: 10px 0 10px 1vw;
+}
+
+.footer_button {
+    color: white;
+    background-color: black;
+    font-size: 1.25rem;
+    margin: 10px 1vw 10px 0;
+}
+
+/* ----- OTHER PAGE CONTENT ----- */
+.pane {
+    grid-area: pane;
+    background-color: #E4E1E0;
+    padding: 50px 0 0 0;
+    width: 100%;
+}
+
+.pane_content_item {
+  margin: 0 2vw;
+}
+
+.pane_content_title {
+  margin: 0 0 0 1vw;
+  font-size: 2rem;
+}
+
+/* ----- STAFF PAGE ----- */
+#bom {
+  margin: 100px 0 50px 0;
+}
+
+/* ----- POLICIES PAGE ----- */
+.policy_title {
+  font-size: 1.5rem;
+}
+
+.policy_text {
+  font-size: 1rem;
+  margin: 10px 2vw;
+}
+
+.policy_viewdownload {
+  font-size: 1.25rem;
+  margin: 10px 2vw;
+}
+
+/* ----- CALENDAR PAGE ----- */
+.calendar_table {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 50px 0;
+}
+
+/* ----- HISTORY PAGE ----- */
+.history_text {
+  font-size: 1rem;
+  margin: 0 1vw 50px 1vw;
+}
+
+/* ----- COMMON ----- */
+
+/* --- Fonts --- */
+.banner_font {
+   font-family: 'Stint Ultra Expanded', cursive;
+}
+
+.title_font {
+  font-family: 'Lucida Grande', sans-serif;
+}
+
+.text_font {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* --- Parallax scrolling ---*/
+.parallax { 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* --- Scrim --- */
+.scrim {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   transition: opacity 0.5s;
+   opacity: 0;
+   pointer-events: none;
+   background: #404040;
+   will-change: opacity;
+   z-index: 11;
+}
+
+/* --- Custom Table style--- */
+.custom_table_container {
+    display: flex;
+    justify-content: center;
+}
+
+.custom_table {
+    border-collapse: collapse;
+    font-size: 1.5rem;
+}
+
+.custom_table thead {
+    border-bottom: 2px solid;
+    font-weight: bold;
+}
+
+.custom_table th, td {
+    border-bottom: 1px solid;
+    padding: 30px 5vw;
+}
+
+.custom_table tbody tr:hover {
+    background-color: #FEF9CD;
+}
+
+/* --- Accordion widget --- */
+
+.accordion_container {
+    margin: 0 0 50px 0;
+    border: 2px solid;
+}
+
+.accordion {
+    background-color: #E4E1E0;
+    color: #444;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    padding: 20px 2vw;
+    border: 1px solid;
+}
+.accordion_active, .accordion:hover {
+    background-color: #FEF9CD;
+}
+
+.accordion_panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin: 0 0 0 5px;
+}
+
+.accordion_active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* --- Other --- */
+
+
+/* ----- MOBILE ----- */
+
+@media screen and (max-width: 500px) {
+
+  .index_grid {
+    grid-template-areas:    
+      "navigation_banner"
+      "display_banner"
+      "about_banner"
+      "headline_news"
+      "facebook_feed"
+      "contact"
+      "footer";
+  }
+
+  .sidenav a {
+    font-size: 2rem;
+  }
+
+  .navigation_text {
+    font-size: 1rem;
+  }
+
+  .display_banner_image {
+    background-position: right;
+  }
+
+  .display_banner_text {
+    font-size: 1rem;
+  }
+
+  .about_banner_info_bubble_container {
+    font-size: 1rem;
+  }
+
+  .about_banner_info_bubble {
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
+  }
+
+  .contact_item:hover {
+    transform: unset;
+      
+  }
+}

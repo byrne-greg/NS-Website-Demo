@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCHOOL_CALENDARS>
+	<CALENDAR years="2017/2018">
+		<CALENDARITEM 
+			event="Mid-term Break Halloween"
+			>30th October – 3rd November 2017 
+			(Re-opens Monday 6th November)</CALENDARITEM>
+		<CALENDARITEM 
+			event="Christmas Holidays"
+			>22nd December 2017 (1/2 day) – 5th January 2018 
+			(re-opens Monday 8th January)</CALENDARITEM>
+		<CALENDARITEM 
+			event="Mid-term Break"
+			>15th February – 16th February 2018</CALENDARITEM>
+		<CALENDARITEM 
+			event="Easter Holidays"
+			>26th March – 6th April 2018 
+			(re-opens Monday 9th April)</CALENDARITEM>
+		<CALENDARITEM 
+			event="Public Holiday"
+			>19th March 2018</CALENDARITEM>
+		<CALENDARITEM 
+			event="Easter Holidays"
+			>26th March – 6th April 2018 
+			(re-opens Monday 9th April)</CALENDARITEM>
+		<CALENDARITEM 
+			event="Bank Holiday"
+			>7th May 2018</CALENDARITEM>
+		<CALENDARITEM 
+			event="School Closure"
+			>14th May 2018</CALENDARITEM>
+		<CALENDARITEM 
+			event="Public Holiday"
+			>4th June 2018</CALENDARITEM>
+		<CALENDARITEM 
+			event="Summer Holidays, last day of school"
+			>Friday 22nd June 2018, 12.30pm</CALENDARITEM>
+	</CALENDAR>
+</SCHOOL_CALENDARS>
